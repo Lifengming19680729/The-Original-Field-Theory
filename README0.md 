@@ -1,0 +1,41 @@
+# 原始场（混沌场）理论代码库
+
+实现论文《原始场（混沌场）理论——混沌开天 原始创世》中的核心模型与预言验证。
+
+## 核心内容
+- 暴烈衍生算子与幸存判据
+- 规范群涌现与跑动耦合计算
+- 关键物理预言验证（如μ子氢兰姆位移）
+
+## 依赖
+- Python 3.8+
+- numpy, scipy
+- DynamicIntervals.jl（DIM动态数学库）
+
+## 安装
+```bash
+git clone https://github.com/[你的GitHub用户名]/ChaosField-Theory.git
+cd ChaosField-Theory
+pip install -r requirements.txt
+python src/predictions/lamb_shift.py
+python src/predictions/lamb_shift.py
+python src/predictions/lamb_shift.py
+@misc{ming2025chaos,
+  title={原始场（混沌场）理论},
+  author={Ming, Lifeng},
+  year={2025},
+  url={https://github.com/[你的GitHub用户名]/ChaosField-Theory}
+}
+
+#### 5. 依赖配置（`requirements.txt`）  
+
+### **上传步骤**  
+1. 在GitHub分别创建两个新仓库：`DynamicIntervals.jl` 和 `ChaosField-Theory`。  
+2. 本地新建两个文件夹，分别放入上述对应库的文件。  
+3. 每个文件夹内执行：  
+   ```bash
+   git init
+   git add .
+   git commit -m "初始提交：完整实现原始场理论与DIM库"
+   git remote add origin https://github.com/[你的用户名]/[仓库名].git
+   git push -u origin main
