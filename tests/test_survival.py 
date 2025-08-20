@@ -1,0 +1,23 @@
+import numpy as np
+from src.core_model import 幸存判据
+
+def test_幸存判据通过():
+    # 满足条件：S_topo > Sc，且其他项为正
+    S_topo = 135.0  # > Sc=134.270
+    α = np.array([0.0])
+    β = np.array([0.0])
+    S_mβ = 134.270
+    assert 幸存判据(S_topo, α, β, S_mβ) == True
+
+def test_幸存判据不通过():
+    # 不满足条件：S_topo < Sc
+    S_topo = 134.0  # < Sc
+    α = np.array([0.0])
+    β = np.array([1.0])
+    S_mβ = 100.0
+    assert 幸存判据(S_topo, α, β, S_mβ) == False
+
+if __name__ == "__main__":
+    test_幸存判据通过()
+    test_幸存判据不通过()
+    print("所有测试通过！")
